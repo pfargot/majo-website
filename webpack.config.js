@@ -65,7 +65,7 @@ module.exports = {
         use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader'],
       },
       {
-        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        test: /\.(png|svg|jpg|jpeg|gif|avif)$/i,
         type: 'asset/resource',
       },
       {
@@ -101,6 +101,10 @@ module.exports = {
           from: 'src/js/sw.js',
           to: 'sw.js',
         },
+        {
+          from: 'src/images',
+          to: 'src/images',
+        },
       ],
     }),
   ],
@@ -108,7 +112,7 @@ module.exports = {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'build'),
     clean: true,
-    publicPath: '/',
+    publicPath: '/majo-website/',
     assetModuleFilename: '[path][name][ext]',
   },
   optimization: {
