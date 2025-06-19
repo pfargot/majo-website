@@ -1,4 +1,4 @@
-# gabezurita.github.io with Tailwind CSS Templates
+# majoargote.github.io with Tailwind CSS Templates
 
 ## Introduction
 
@@ -88,20 +88,20 @@ You can view the workflow configurations in `.github/workflows/`.
 
 ### Prerequisites
 
-Ensure **Node.js** is installed on your machine. Without it, the installation and build commands won’t work.
+Ensure **Node.js** is installed on your machine. Without it, the installation and build commands won't work.
 
 ### Installation
 
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/gabezurita/gabezurita.github.io.git
+   git clone https://github.com/majoargote/majoargote.github.io.git
    ```
 
 2. Navigate into the project folder:
 
    ```bash
-   cd gabezurita.github.io
+   cd majoargote.github.io
    ```
 
 3. Install dependencies:
@@ -142,7 +142,7 @@ To set up deployment:
 
 You can monitor the deployment status in the "Actions" tab of your repository.
 
-The site will be accessible at <https://gabezurita.github.io/gabezurita.github.io> and <https://gabo.online> once deployed.
+The site will be accessible at <https://majoargote.github.io/majoargote.github.io> and <https://gabo.online> once deployed.
 
 ---
 
@@ -189,6 +189,6 @@ This project is based on templates from UIdeck. Please ensure you comply with th
 If you have any questions or run into issues:
 
 - Open an issue in this repository.
-- Reach out to [me](https://github.com/gabezurita) directly.
+- Reach out to [me](https://github.com/majoargote) directly.
 
 Happy coding!
