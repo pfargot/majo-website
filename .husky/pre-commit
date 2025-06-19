@@ -1,0 +1,65 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+echo "🔍 Running pre-commit checks..."
+
+# Get staged files
+JS_FILES=$(git diff --cached --name-only --diff-filter=d | grep -E '\.(js|jsx|ts|tsx)$' || true)
+PRETTIER_FILES=$(git diff --cached --name-only --diff-filter=d | grep -E '\.(js|jsx|ts|tsx|css|scss|json|md|yaml|yml)$' || true)
+
+# Run ESLint only on staged JS files
+if [ -n "$JS_FILES" ]; then
+  echo "🔎 Running ESLint on staged JavaScript files..."
+  if ! npx eslint --fix $JS_FILES; then
+    echo "❌ ESLint found issues that couldn't be automatically fixed"
+    exit 1
+  fi
+  echo "✅ ESLint checks passed"
+else
+  echo "ℹ️  No JavaScript files to lint"
+fi
+
+# Run Prettier only on staged formattable files
+if [ -n "$PRETTIER_FILES" ]; then
+  echo "💅 Running Prettier on staged files..."
+  if ! npx prettier --write $PRETTIER_FILES; then
+    echo "❌ Prettier formatting failed"
+    exit 1
+  fi
+  echo "✅ Prettier formatting complete"
+else
+  echo "ℹ️  No files need formatting"
+fi
+
+# Stage any files that were auto-fixed
+git add $JS_FILES $PRETTIER_FILES
+
+# Run quick tests only on affected files
+if [ -n "$JS_FILES" ]; then
+  echo "🧪 Running tests related to changed files..."
+  if ! npm run test:quick $JS_FILES; then
+    echo "❌ Tests failed"
+    exit 1
+  fi
+  echo "✅ All tests passed"
+else
+  echo "ℹ️  No JavaScript changes to test"
+fi
+
+# Run build command
+echo "🏗️  Building project..."
+if ! npm run build; then
+  echo "❌ Build failed"
+  exit 1
+fi
+
+# Stage build artifacts if they changed
+if [ -n "$(git diff --name-only build/)" ]; then
+  echo "📦 Build files changed, staging updates..."
+  git add build/
+  echo "✅ Build artifacts staged"
+else
+  echo "ℹ️  No build artifacts changed"
+fi
+
+echo "✨ All pre-commit checks passed successfully!"

@@ -1,0 +1,21 @@
+# Enable caching for static assets with 1 week max-age and must-revalidate
+<FilesMatch "\.(jpg|jpeg|png|gif|avif|ico|css|js)$">
+    Header set Cache-Control "public, must-revalidate, max-age=604800"
+</FilesMatch>
+
+# HTML files should be revalidated more frequently
+<FilesMatch "\.html$">
+    Header set Cache-Control "public, must-revalidate, max-age=300"
+</FilesMatch>
+
+# Disable caching for service worker
+<FilesMatch "sw\.js$">
+    Header set Cache-Control "no-cache, no-store, must-revalidate"
+    Header set Pragma "no-cache"
+    Header set Expires 0
+</FilesMatch>
+
+# Force revalidation of all files
+<IfModule mod_headers.c>
+    Header set Cache-Control "must-revalidate"
+</IfModule>

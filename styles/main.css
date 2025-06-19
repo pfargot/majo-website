@@ -1,0 +1,18 @@
+/* Assuming you're using Tailwind, add these custom colors with proper contrast ratios */
+:root {
+  --primary-dark: #0056b3; /* Darker shade for light backgrounds */
+  --primary-light: #4d9fff; /* Lighter shade for dark backgrounds */
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom classes */
+.text-primary {
+  color: var(--primary-dark);
+}
+
+.dark .text-primary {
+  color: var(--primary-light);
+}
