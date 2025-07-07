@@ -12,7 +12,7 @@ module.exports = {
       white: '#FFFFFF',
       black: '#2C3639',
       dark: '#4A5043',
-      primary: '#557153',
+      primary: '#B2C2A8',
       yellow: '#86A789',
       'body-color': '#2C3639',
       'footer-text': '#FFFFFF',

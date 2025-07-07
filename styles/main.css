@@ -1,7 +1,7 @@
 /* Assuming you're using Tailwind, add these custom colors with proper contrast ratios */
 :root {
-  --primary-dark: #0056b3; /* Darker shade for light backgrounds */
-  --primary-light: #4d9fff; /* Lighter shade for dark backgrounds */
+  --primary-dark: #b2c2a8; /* Sage green for light backgrounds */
+  --primary-light: #b2c2a8; /* Sage green for dark backgrounds */
 }
 
 @tailwind base;
