@@ -112,7 +112,7 @@ module.exports = {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'build'),
     clean: true,
-    publicPath: '/',
+    publicPath: process.env.NODE_ENV === 'production' ? '/majo-website/' : '/',
     assetModuleFilename: '[path][name][ext]',
   },
   optimization: {
