@@ -169,18 +169,6 @@
         ]
       }
     </script>
-
-    <!-- Google Translate init scripts -->
-    <script type="text/javascript">
-      function googleTranslateElementInit() {
-        new google.translate.TranslateElement({
-          pageLanguage: 'en',
-          includedLanguages: 'en,fr,es',
-          layout: google.translate.TranslateElement.InlineLayout.SIMPLE
-        }, 'google_translate_element');
-      }
-    </script>
-    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
   </head>
   <body id="top">
     <!-- ====== Navbar Section Start -->
@@ -271,12 +259,15 @@
                 Download CV
               </a>
             </div>
+            <!-- Language switcher -->
+            <div class="hidden lg:flex space-x-2 items-center ml-4">
+              <button data-lang="en" class="lang-btn text-base font-bold text-white bg-primary rounded-full py-2 px-4 hover:bg-opacity-90 transition">EN</button>
+              <button data-lang="fr" class="lang-btn text-base font-bold text-white bg-primary rounded-full py-2 px-4 hover:bg-opacity-90 transition">FR</button>
+              <button data-lang="es" class="lang-btn text-base font-bold text-white bg-primary rounded-full py-2 px-4 hover:bg-opacity-90 transition">ES</button>
+            </div>
           </div>
         </div>
       </div>
-
-      <!-- Translation switcher -->
-      <div id="google_translate_element" class="absolute top-4 right-4 z-50"></div>
     </header>
     <!-- ====== Navbar Section End -->
     <main role="main">
@@ -919,6 +910,19 @@
           })
         })
       }
+    </script>
+    <!-- Custom language toggler script -->
+    <script type="text/javascript">
+      function changeLang(lang) {
+        const select = document.querySelector("#google_translate_element select");
+        if (select) {
+          select.value = lang;
+          select.dispatchEvent(new Event("change"));
+        }
+      }
+      document.querySelectorAll(".lang-btn").forEach(btn => {
+        btn.addEventListener("click", () => changeLang(btn.dataset.lang));
+      });
     </script>
   </body>
 </html>
