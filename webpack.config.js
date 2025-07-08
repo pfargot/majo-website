@@ -76,6 +76,7 @@ module.exports = {
         loader: 'html-loader',
         options: {
           preprocessor: processNestedHtml,
+          sources: false,
         },
       },
     ],
