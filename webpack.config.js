@@ -90,14 +90,8 @@ module.exports = {
       patterns: [
         { from: 'CNAME', to: '.' },
         { from: 'src/cv', to: 'cv' },
-        {
-          from: 'src/js/sw.js',
-          to: 'sw.js',
-        },
-        {
-          from: 'src/images',
-          to: 'src/images',
-        },
+        { from: 'src/js/sw.js', to: 'sw.js' },
+        { from: 'src/images', to: 'images' },
       ],
     }),
   ],
