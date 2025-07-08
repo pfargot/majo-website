@@ -33,7 +33,6 @@ const generateHTMLPlugins = () =>
     return new HtmlWebpackPlugin({
       filename,
       template: `./src/${filename}`,
-      favicon: `./src/images/favicon/favicon.ico`,
       inject: 'body',
     })
   })
