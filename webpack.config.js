@@ -90,10 +90,6 @@ module.exports = {
     new CopyWebpackPlugin({
       patterns: [
         {
-          from: 'CNAME',
-          to: '.',
-        },
-        {
           from: 'src/cv',
           to: 'cv',
         },
