@@ -89,10 +89,8 @@ module.exports = {
     }),
     new CopyWebpackPlugin({
       patterns: [
-        {
-          from: 'src/cv',
-          to: 'cv',
-        },
+        { from: 'CNAME', to: '.' },
+        { from: 'src/cv', to: 'cv' },
         {
           from: 'src/js/sw.js',
           to: 'sw.js',
@@ -108,7 +106,7 @@ module.exports = {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'build'),
     clean: true,
-    publicPath: process.env.NODE_ENV === 'production' ? '/majo-website/' : '/',
+    publicPath: process.env.NODE_ENV === 'production' ? '' : '/',
     assetModuleFilename: '[path][name][ext]',
   },
   optimization: {
