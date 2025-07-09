@@ -6,9 +6,9 @@ const DYNAMIC_CACHE = `dynamic-${CACHE_VERSION}`
 const STATIC_ASSETS = [
   '/',
   '/index.html',
-  '/src/css/style.css',
-  '/src/images/hero/hero-image.avif',
-  '/src/images/hero/hero-image-mobile.avif',
+  '/css/style.css',
+  '/images/hero/hero-image.avif',
+  '/images/hero/hero-image-mobile.avif',
   '/bundle.js',
 ]
 
