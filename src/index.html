@@ -114,8 +114,12 @@
       @media (max-width: 1024px) {
         .lg\\:hidden { display: block; }
         .lg\\:block { display: none; }
-        .lang-switcher-mobile { width: 100%; justify-content: flex-end; margin-bottom: 0.5rem; }
-        .lang-switcher-mobile .lang-btn { min-width: 48px; padding-left: 0.5rem; padding-right: 0.5rem; font-size: 1rem; }
+        .lang-switcher-in-header { display: none !important; }
+        .lang-switcher-top-mobile { display: flex !important; }
+      }
+      @media (min-width: 1025px) {
+        .lang-switcher-top-mobile { display: none !important; }
+        .lang-switcher-in-header { display: flex !important; }
       }
       .hero-image-container {
         aspect-ratio: 427/600;
@@ -249,7 +253,7 @@
               </nav>
             </div>
             <!-- Language switcher -->
-            <div class="flex space-x-2 items-center ml-4 lang-switcher-mobile">
+            <div class="flex space-x-2 items-center ml-4 lang-switcher-in-header">
               <button data-lang="en" class="lang-btn text-base font-bold text-white bg-primary rounded-full py-2 px-4 hover:bg-opacity-90 transition">EN</button>
               <button data-lang="fr" class="lang-btn text-base font-bold text-white bg-primary rounded-full py-2 px-4 hover:bg-opacity-90 transition">FR</a>
               <button data-lang="es" class="lang-btn text-base font-bold text-white bg-primary rounded-full py-2 px-4 hover:bg-opacity-90 transition">ES</button>
