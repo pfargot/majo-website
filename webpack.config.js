@@ -93,6 +93,7 @@ module.exports = {
         { from: 'src/cv', to: 'cv' },
         { from: 'src/js/sw.js', to: 'sw.js' },
         { from: 'src/images', to: 'images' },
+        { from: 'src/images/favicon/favicon.ico', to: 'favicon.ico' },
       ],
     }),
   ],
