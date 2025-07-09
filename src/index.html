@@ -222,7 +222,7 @@
                       class="menu-scroll text-base text-black group-hover:text-primary py-2 lg:py-6 lg:inline-flex lg:px-0 flex items-center mx-8 lg:mr-0"
                     >
                       <i class="fas fa-home mr-2 inline-block w-[1em]" aria-hidden="true"></i>
-                      Home
+                      <span data-i18n="nav-home">Home</span>
                     </a>
                   </li>
                   <li class="relative group">
@@ -231,7 +231,7 @@
                       class="menu-scroll text-base text-black group-hover:text-primary py-2 lg:py-6 lg:inline-flex lg:px-0 flex items-center mx-8 lg:mr-0 lg:ml-8 xl:ml-12"
                     >
                       <i class="fas fa-user mr-2 inline-block w-[1em]" aria-hidden="true"></i>
-                      About
+                      <span data-i18n="nav-about">About</span>
                     </a>
                   </li>
                   <li class="relative group">
@@ -240,7 +240,7 @@
                       class="menu-scroll text-base text-black group-hover:text-primary py-2 lg:py-6 lg:inline-flex lg:px-0 flex items-center mx-8 lg:mr-0 lg:ml-8 xl:ml-12"
                     >
                       <i class="fas fa-envelope mr-2 inline-block w-[1em]" aria-hidden="true"></i>
-                      Contact
+                      <span data-i18n="nav-contact">Contact</span>
                     </a>
                   </li>
                 </ul>
@@ -248,9 +248,9 @@
             </div>
             <!-- Language switcher -->
             <div class="flex space-x-2 items-center ml-4">
-              <a href="index.html" class="lang-btn text-base font-bold text-white bg-primary rounded-full py-2 px-4 hover:bg-opacity-90 transition">EN</a>
-              <a href="fr.html" class="lang-btn text-base font-bold text-white bg-primary rounded-full py-2 px-4 hover:bg-opacity-90 transition">FR</a>
-              <a href="es.html" class="lang-btn text-base font-bold text-white bg-primary rounded-full py-2 px-4 hover:bg-opacity-90 transition">ES</a>
+              <button data-lang="en" class="lang-btn text-base font-bold text-white bg-primary rounded-full py-2 px-4 hover:bg-opacity-90 transition">EN</button>
+              <button data-lang="fr" class="lang-btn text-base font-bold text-white bg-primary rounded-full py-2 px-4 hover:bg-opacity-90 transition">FR</a>
+              <button data-lang="es" class="lang-btn text-base font-bold text-white bg-primary rounded-full py-2 px-4 hover:bg-opacity-90 transition">ES</button>
             </div>
           </div>
         </div>
@@ -269,18 +269,18 @@
             <div class="w-full lg:w-1/2 self-center px-4 relative z-20">
               <div>
                 <h1 class="text-base font-semibold text-primary mb-3">
-                  Hey There 👋 I am
+                  <span data-i18n="hero-hey">Hey There 👋 I am</span>
                   <span
                     class="font-bold text-black text-3xl sm:text-3xl md:text-[45px] leading-tight sm:leading-tight md:leading-[50px] block mt-1"
-                  >
-                    Mariajosé Argote
-                  </span>
+                    data-i18n="hero-title"
+                  >Mariajosé Argote</span>
                 </h1>
-                <h2 class="font-semibold text-xl sm:text-2xl text-body-color mb-5">
+                <h2 class="font-semibold text-xl sm:text-2xl text-body-color mb-5" data-i18n="hero-subtitle">
                   Founder, Advisor &amp; Growth Strategist
                 </h2>
                 <p
                   class="max-w-[470px] font-medium text-body-color text-lg leading-relaxed mb-11 text-justify"
+                  data-i18n="hero-desc"
                 >
                   Mariajosé Argote is a purpose-driven founder, advisor, and growth strategist with 10+ years of international experience.
                 </p>
@@ -291,7 +291,7 @@
                     aria-label="Connect with me"
                   >
                     <i class="fas fa-handshake mr-2 inline-block w-[1em]" aria-hidden="true"></i>
-                    Connect With Me
+                    <span data-i18n="hero-connect">Connect With Me</span>
                   </a>
                 </div>
               </div>
@@ -412,30 +412,15 @@
           <div class="flex flex-wrap mx-[-16px]">
             <div class="w-full px-4">
               <div class="max-w-[600px] mx-auto text-center mb-[50px]">
-                <p class="font-semibold text-lg text-primary block mb-2">A quick intro</p>
-                <h2 class="font-bold text-black text-3xl sm:text-4xl md:text-[45px] mb-5">About</h2>
+                <p class="font-semibold text-lg text-primary block mb-2" data-i18n="about-quick">A quick intro</p>
+                <h2 class="font-bold text-black text-3xl sm:text-4xl md:text-[45px] mb-5" data-i18n="about-heading">About</h2>
 
-                <p class="font-medium text-lg text-body-color text-justify mb-6">
+                <p class="font-medium text-lg text-body-color text-justify mb-6" data-i18n="about-desc1">
                   Mariajosé Argote is a purpose-driven founder, advisor, and growth strategist with 10+ years of international experience. She has led operations, strategic partnerships, and venture growth in the US, UK, EU, and Latin America. Her leadership spans industries including insurtech, healthtech, and mobility.
                 </p>
 
-                <p class="font-medium text-lg text-body-color text-justify">
-                  For insights into my professional journey, my
-                  <a
-                    href="https://www.linkedin.com/in/majoargote/"
-                    target="_blank"
-                    class="inline-flex items-center text-link-color hover:text-link-hover underline decoration-2 hover:decoration-[3px] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary"
-                  >
-                    <span>LinkedIn</span><i class="fa fa-external-link-alt ml-1 inline-block w-[1em]"></i>
-                  </a>
-                  &nbsp;profile is available for review. If you want to connect or discuss shared interests, head to the&nbsp;
-                  <a
-                    href="#contact"
-                    class="inline-flex items-center text-link-color hover:text-link-hover underline decoration-2 hover:decoration-[3px] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary menu-scroll"
-                  >
-                    <span>contact section</span>
-                  </a>
-                  &nbsp;below.
+                <p class="font-medium text-lg text-body-color text-justify" data-i18n="about-desc2">
+                  For insights into my professional journey, my <a href="https://www.linkedin.com/in/majoargote/" target="_blank">LinkedIn</a> profile is available for review. If you want to connect or discuss shared interests, head to the <a href="#contact" class="menu-scroll">contact section</a> below.
                 </p>
               </div>
             </div>
@@ -480,15 +465,9 @@
         <div class="flex flex-wrap -mx-4">
           <div class="w-full px-4">
             <div class="max-w-[600px] mx-auto text-center mb-[50px]">
-              <p class="font-semibold text-lg text-yellow block mb-2"
-                >Want to stay in touch?</p
-              >
-              <h2 class="font-bold text-white text-3xl sm:text-4xl md:text-[45px] mb-5">
-                Let's connect!
-              </h2>
-              <p class="font-medium text-lg text-heading-light text-justify">
-                Feel free to connect and explore collaboration opportunities. Cheers!
-              </p>
+              <p class="font-semibold text-lg text-yellow block mb-2" data-i18n="contact-want">Want to stay in touch?</p>
+              <h2 class="font-bold text-white text-3xl sm:text-4xl md:text-[45px] mb-5" data-i18n="contact-heading">Let's connect!</h2>
+              <p class="font-medium text-lg text-heading-light text-justify" data-i18n="contact-desc">Feel free to connect and explore collaboration opportunities. Cheers!</p>
             </div>
           </div>
         </div>
@@ -502,7 +481,7 @@
                 title="Mariajosé Argote personal email address"
               >
                 <i class="fas fa-envelope mr-2" aria-hidden="true"></i>
-                <span>Email</span>
+                <span data-i18n="contact-email">Email</span>
               </a>
 
               <!-- <a
@@ -522,7 +501,7 @@
                 title="Mariajosé Argote LinkedIn profile"
               >
                 <i class="fab fa-linkedin-in mr-2" aria-hidden="true"></i>
-                <span>LinkedIn</span>
+                <span data-i18n="contact-linkedin">LinkedIn</span>
               </a>
 
 
@@ -785,7 +764,7 @@
       <div class="w-full border-t border-white border-opacity-10 mt-auto relative">
         <div class="container">
           <div class="py-6">
-            <p class="font-medium text-lg text-footer-text text-center">
+            <p class="font-medium text-lg text-footer-text text-center" data-i18n="contact-thanks">
               Thanks for stopping by! 👋
             </p>
           </div>
