@@ -141,6 +141,17 @@
         height: 1em;
         vertical-align: -0.125em;
       }
+      /* High-contrast link styles for main content */
+      main a {
+        color: #2563eb;
+        text-decoration: underline;
+        font-weight: 500;
+        transition: color 0.2s;
+      }
+      main a:hover, main a:focus {
+        color: #1e40af;
+        text-decoration: underline wavy;
+      }
     </style>
 
     <!-- Non-critical CSS -->
@@ -175,6 +186,13 @@
     <!-- Removed Google Translate widget and scripts for clean i18next-only translation -->
   </head>
   <body id="top">
+    <!-- ====== Mobile Language Switcher Start ====== -->
+    <div class="lang-switcher-top-mobile w-full flex justify-center py-2 bg-white shadow-md" style="display:none">
+      <button data-lang="en" class="lang-btn text-base font-bold text-white bg-primary rounded-full py-2 px-4 mx-1 hover:bg-opacity-90 transition">EN</button>
+      <button data-lang="fr" class="lang-btn text-base font-bold text-white bg-primary rounded-full py-2 px-4 mx-1 hover:bg-opacity-90 transition">FR</button>
+      <button data-lang="es" class="lang-btn text-base font-bold text-white bg-primary rounded-full py-2 px-4 mx-1 hover:bg-opacity-90 transition">ES</button>
+    </div>
+    <!-- ====== Mobile Language Switcher End ====== -->
     <!-- ====== Navbar Section Start -->
     <header
       class="header bg-transparent absolute top-0 left-0 z-40 w-full flex items-center transition"
