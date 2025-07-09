@@ -897,15 +897,28 @@
     </script>
     <!-- Custom language toggler script -->
     <script type="text/javascript">
-      function changeLang(lang) {
-        const select = document.querySelector("#google_translate_element select");
+      function waitForTranslateSelect(cb) {
+        const interval = setInterval(() => {
+          const select = document.querySelector('#google_translate_element select');
+          if (select) {
+            clearInterval(interval);
+            cb(select);
+          }
+        }, 100);
+      }
+      function triggerLangChange(lang) {
+        const select = document.querySelector('#google_translate_element select');
         if (select) {
           select.value = lang;
-          select.dispatchEvent(new Event("change"));
+          // Google Translate sometimes needs both events
+          select.dispatchEvent(new Event('change', { bubbles: true }));
+          select.dispatchEvent(new Event('input', { bubbles: true }));
         }
       }
-      document.querySelectorAll(".lang-btn").forEach(btn => {
-        btn.addEventListener("click", () => changeLang(btn.dataset.lang));
+      waitForTranslateSelect(() => {
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+          btn.addEventListener('click', () => triggerLangChange(btn.dataset.lang));
+        });
       });
     </script>
     <div id="google_translate_element" style="position:absolute; left:-9999px; top:0; width:0; height:0; overflow:hidden;"></div>
