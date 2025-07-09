@@ -1,4 +1,5 @@
 import i18next from 'i18next'
+import '../css/style.css'
 
 i18next.init(
   {
