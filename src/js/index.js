@@ -40,15 +40,16 @@ i18next.init(
           hero: {
             hey: 'Bonjour 👋 Je suis',
             title: 'Mariajosé Argote',
-            subtitle: 'Fondatrice, Conseillère & Stratège de Croissance',
-            desc: 'Mariajosé Argote est une fondatrice, conseillère et stratège de croissance animée par une mission, avec plus de 10 ans d’expérience internationale.',
+            subtitle:
+              'Fondatrice, Conseillère & Spécialiste en Stratégie de Croissance',
+            desc: 'Mariajosé Argote est une fondatrice, conseillère et spécialiste en stratégie de croissance animée par une mission, avec plus de 10 ans d’expérience internationale.',
             connect: 'Entrer en contact',
           },
           about: {
             quick: 'Petite introduction',
             heading: 'À propos',
             desc1:
-              'Mariajosé Argote est une fondatrice, conseillère et stratège de croissance animée par une mission, avec plus de 10 ans d’expérience internationale. Elle a dirigé des opérations, des partenariats stratégiques et la croissance de start-ups aux États-Unis, au Royaume-Uni, dans l’UE et en Amérique latine. Son leadership s’étend à des secteurs comme l’insurtech, la healthtech et la mobilité.',
+              'Mariajosé Argote est une fondatrice, conseillère et spécialiste en stratégie de croissance animée par une mission, avec plus de 10 ans d’expérience internationale. Elle a dirigé des opérations, des partenariats stratégiques et la croissance de start-ups aux États-Unis, au Royaume-Uni, dans l’UE et en Amérique latine. Son leadership s’étend à des secteurs comme l’insurtech, la healthtech et la mobilité.',
             desc2:
               'Pour en savoir plus sur mon parcours professionnel, mon <1>LinkedIn</1> est disponible. Pour échanger ou discuter d’intérêts communs, rendez-vous dans la <3>section contact</3> ci-dessous.',
           },
@@ -68,15 +69,16 @@ i18next.init(
           hero: {
             hey: '¡Hola! 👋 Soy',
             title: 'Mariajosé Argote',
-            subtitle: 'Fundadora, Asesora y Estratega de Crecimiento',
-            desc: 'Mariajosé Argote es una fundadora, asesora y estratega de crecimiento con propósito y más de 10 años de experiencia internacional.',
+            subtitle:
+              'Fundadora, Asesora y Especialista en Estrategia de Crecimiento',
+            desc: 'Mariajosé Argote es una fundadora, asesora y especialista en estrategia de crecimiento con propósito y más de 10 años de experiencia internacional.',
             connect: 'Conectar conmigo',
           },
           about: {
             quick: 'Una breve introducción',
             heading: 'Sobre mí',
             desc1:
-              'Mariajosé Argote es una fundadora, asesora y estratega de crecimiento con propósito y más de 10 años de experiencia internacional. Ha liderado operaciones, alianzas estratégicas y el crecimiento de startups en EE.UU., Reino Unido, UE y América Latina. Su liderazgo abarca sectores como insurtech, healthtech y movilidad.',
+              'Mariajosé Argote es una fundadora, asesora y especialista en estrategia de crecimiento con propósito y más de 10 años de experiencia internacional. Ha liderado operaciones, alianzas estratégicas y el crecimiento de startups en EE.UU., Reino Unido, UE y América Latina. Su liderazgo abarca sectores como insurtech, healthtech y movilidad.',
             desc2:
               'Para conocer más sobre mi trayectoria profesional, mi <1>LinkedIn</1> está disponible. Si quieres conectar o hablar de intereses comunes, dirígete a la <3>sección de contacto</3> abajo.',
           },
@@ -98,6 +100,7 @@ i18next.init(
 )
 
 function updateContent() {
+  document.documentElement.setAttribute('lang', i18next.language || 'en')
   document.querySelector('[data-i18n="nav-home"]').textContent =
     i18next.t('nav.home')
   document.querySelector('[data-i18n="nav-about"]').textContent =

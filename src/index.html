@@ -276,7 +276,7 @@
             <!-- Language switcher -->
             <div class="flex space-x-2 items-center ml-4 lang-switcher-in-header">
               <button data-lang="en" class="lang-btn text-base font-bold text-white bg-primary rounded-full py-2 px-4 hover:bg-opacity-90 transition">EN</button>
-              <button data-lang="fr" class="lang-btn text-base font-bold text-white bg-primary rounded-full py-2 px-4 hover:bg-opacity-90 transition">FR</a>
+              <button data-lang="fr" class="lang-btn text-base font-bold text-white bg-primary rounded-full py-2 px-4 hover:bg-opacity-90 transition">FR</button>
               <button data-lang="es" class="lang-btn text-base font-bold text-white bg-primary rounded-full py-2 px-4 hover:bg-opacity-90 transition">ES</button>
             </div>
           </div>
@@ -896,31 +896,6 @@
         })
       }
     </script>
-    <!-- Custom language toggler script -->
-    <script type="text/javascript">
-      function waitForTranslateSelect(cb) {
-        const interval = setInterval(() => {
-          const select = document.querySelector('#google_translate_element select');
-          if (select) {
-            clearInterval(interval);
-            cb(select);
-          }
-        }, 100);
-      }
-      function triggerLangChange(lang) {
-        const select = document.querySelector('#google_translate_element select');
-        if (select) {
-          select.value = lang;
-          // Google Translate sometimes needs both events
-          select.dispatchEvent(new Event('change', { bubbles: true }));
-          select.dispatchEvent(new Event('input', { bubbles: true }));
-        }
-      }
-      waitForTranslateSelect(() => {
-        document.querySelectorAll('.lang-btn').forEach(btn => {
-          btn.addEventListener('click', () => triggerLangChange(btn.dataset.lang));
-        });
-      });
-    </script>
+
   </body>
 </html>
